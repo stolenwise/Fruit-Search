@@ -1,0 +1,89 @@
+title {
+  display: none;
+  visibility: hidden;
+}
+
+* {
+  /* box-sizing: border-box; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:focus {
+  /* TODO for the search bar (not text)*/
+
+  border-bottom: 1px solid orangered;
+  border-radius: 2px;
+  outline: 1px groove lightgray;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  /* set the gradient and have it cover the whole page */
+  background: rgb(251, 97, 63);
+  background: linear-gradient(
+    216deg,
+    rgba(251, 97, 63, 1) 0%,
+    rgba(252, 232, 70, 1) 100%
+  );
+  background-size: cover;
+}
+
+input {
+  /*  */
+  flex: 1;
+  height: 40px;
+  border-style: none;
+  background-color: transparent;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.search-container {
+  /*  */
+  width: 167px;
+  margin: 45vh auto 0;
+  border-bottom: orangered 1px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.search-bar {
+  align-items: center;
+  border-bottom: orangered 1px;
+}
+
+.suggestions {
+  max-height: 250px;
+  width: 167px;
+  overflow-y: auto;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.suggestions ul {
+  flex: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.suggestions ul li {
+  /*  */
+  list-style-type: none;
+  padding: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+}
+ul li:hover {
+  /*  */
+  background-color: orangered;
+  color: white; /* personal change - Makes readability easier */
+}
